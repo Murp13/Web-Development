@@ -5,10 +5,12 @@
   
 </head>
 <body>
-   
+   <div>
+    <h1 id="hal1">Hasil</h1>
+</div>
+<div id="box-hasil">
+<h2 id="hal2">Berat Badan</h2>
     <div class="display" id="result">
-        <h1>Hasil</h1>
-        <h2>Berat Badan</h2>
         <script>
             // Retrieve the BMI value and category from sessionStorage
             const bmi = sessionStorage.getItem('bmiValue');
@@ -16,9 +18,12 @@
 
             const resultDiv = document.getElementById('result');
             // Display BMI value and category
-            resultDiv.innerHTML = `BMI: ${bmi}<br>Kategori: ${category}`;
+            resultDiv.innerHTML = `${bmi} <br> ${category}`;
+            
         </script>
+        
     </div>
-   
+</div>
+
 </body>
 </html>

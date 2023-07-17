@@ -27,15 +27,36 @@ input {
     */
   /*  background-color: rgb(227, 242, 242);
   }*/
+  * {
+   
+    box-sizing: border-box;
+    border: none;
+    
+}
   #result{
       font-size: 30px;
       font-weight: 700;
       letter-spacing: 1px;
       text-align: center;
-      color: #0be881;
+      
   }
   #category{
       font-size: 18px;
       text-align: center;
       letter-spacing: 1px;
   }
+div.display {
+    color: black;
+}
+#hal2{
+    text-align: center;
+}
+#box-hasil {
+    background-color: rgb(185, 185, 185);
+    color: black;
+    border: none;
+    
+}
+body h1{
+    padding: 5px;
+}
