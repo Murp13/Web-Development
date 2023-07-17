@@ -1,0 +1,42 @@
+/* Your CSS styles here */
+#box-utama {
+    background-color: rgb(185, 185, 185);
+    color: black;
+    border: none;
+    
+}
+div.a{
+    word-wrap: break-word;
+    word-spacing: normal;
+    
+}
+form {
+padding: 5px;
+}
+body p{
+   word-wrap: break-word;
+   word-spacing: normal;
+}
+input {
+    border-style: none;
+}
+/* hasil tampilan */
+
+/* #Hasil{ */
+    /* box-shadow: 0 0 20px rgba(0,139,253,0.25);
+    margin-bottom: 60px;
+    */
+  /*  background-color: rgb(227, 242, 242);
+  }*/
+  #result{
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+      color: #0be881;
+  }
+  #category{
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 1px;
+  }

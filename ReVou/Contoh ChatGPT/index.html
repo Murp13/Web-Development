@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="warna.css">
+</head>
+<body>
+    <h1>Kalkulator BMI</h1>
+    <div class="a">
+        <!-- Your content here -->
+        <p>
+            Berat badan ideal adalah impian semua orang. 
+            Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat.
+            Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
+        </p>
+    </div>
+    <div id="box-utama">
+        <form id="isiBmi">
+            <!-- Your form elements here -->
+            <div id="box1">
+                <label>
+                    <strong>Jenis Kelamin</strong>
+                </label><br>
+                <input type="radio" name="Kelamin" value="Laki-Laki" required>
+                <label>Laki-Laki</label>
+                <input type="radio" name="Kelamin" value="Perempuan" required>
+                <label>Perempuan</label><br><br>
+            </div>
+            <div id="box2">
+                <label for="bb">
+                    <strong>Berat Badan</strong> (kg)
+                </label><br>
+                <input type="number" id="bb" required><br><br>
+            </div>
+            <div id="box3">
+                <label for="age">
+                    <strong>Usia</strong> (tahun)
+                </label><br>
+                <input type="number" id="age" required><br><br>
+            </div>
+            <div id="box4">
+                <label for="tb">
+                    <strong>Tinggi Badan</strong> (cm)
+                </label><br>
+                <input type="number" id="tb" required><br><br>
+            </div>
+            <input type="submit" value="Hitung BMI">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+    <article>
+        <!-- Your content here -->
+    </article>
+    <script src="script2.js"></script>
+</body>
+</html>

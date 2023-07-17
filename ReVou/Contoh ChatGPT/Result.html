@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Perhitungan BMI</title>
+    <link rel="stylesheet" href="warna.css">
+</head>
+<body>
+    <div class="display" id="result">
+        <h1>Hasil</h1>
+        <h2>Berat Badan</h2>
+        <script>
+            // Retrieve the BMI value and category from sessionStorage
+            const bmi = sessionStorage.getItem('bmiValue');
+            const category = sessionStorage.getItem('categoryValue');
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `BMI: ${bmi}<br>Kategori: ${category}`;
+        </script>
+    </div>
+</body>
+</html>
