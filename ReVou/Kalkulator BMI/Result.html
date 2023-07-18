@@ -1,29 +1,86 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Hasil Perhitungan BMI</title>
     <link rel="stylesheet" href="warna.css">
-  
 </head>
-<body>
-   <div>
-    <h1 id="hal1">Hasil</h1>
-</div>
-<div id="box-hasil">
-<h2 id="hal2">Berat Badan</h2>
-    <div class="display" id="result">
-        <script>
-            // Retrieve the BMI value and category from sessionStorage
-            const bmi = sessionStorage.getItem('bmiValue');
-            const category = sessionStorage.getItem('categoryValue');
-
-            const resultDiv = document.getElementById('result');
-            // Display BMI value and category
-            resultDiv.innerHTML = `${bmi} <br> ${category}`;
-            
-        </script>
-        
+<body style="margin: 10px;">
+    <div>
+        <h1 id="hal1" style="text-align: center;">Hasil</h1>
     </div>
-</div>
+    <div id="box-hasil">
+        <h2 id="hal2">Berat Badan</h2>
+        <div class="display" id="result">
+            <script>
+                // Retrieve the BMI value and category from sessionStorage
+                const bmi = sessionStorage.getItem('bmiValue');
+                const category = sessionStorage.getItem('categoryValue');
 
+                const resultDiv = document.getElementById('result');
+                // Create elements for BMI and category
+                const bmiDiv = document.createElement('div');
+                const categoryDiv = document.createElement('div');
+
+                // Apply different font sizes to the elements
+                bmiDiv.style.fontSize = "60px"; // Adjust the size as per your preference
+                categoryDiv.style.fontSize = "22px"; // Adjust the size as per your preference
+
+                // Set the values for BMI and category
+                bmiDiv.textContent = bmi;
+                categoryDiv.textContent = category;
+
+                // Append the elements to the resultDiv
+                resultDiv.appendChild(bmiDiv);
+                resultDiv.appendChild(categoryDiv);
+            </script> 
+        <a href="Halaman Awal.html">
+            <input type="button" value="Kembali"
+             style="background-color: #5bbfdd; height: 30px;
+             width: 100px;"/>
+        </a> 
+        </div>
+    </div>
+    <div id="box-hasil2" style="text-align: center;">
+        <article>
+            <p>
+                <br>
+                <strong>Anda berada dalam kategori:</strong> 
+                <span id="category"></span>
+            </p>
+        </article>
+    </div>  
+    <script>
+        window.onload = function () {
+            // Retrieve the BMI value from sessionStorage
+            const bmi = sessionStorage.getItem('bmiValue');
+
+            // Calculate the category message
+            let ket;
+            if (parseFloat(bmi) < 18.5) {
+                ket = "Kurang Sehat karena asupan gizi kurang & olahraga";
+            } else if (parseFloat(bmi) >= 18.5 && parseFloat(bmi) <= 24.9) {
+                ket = "Sehat, Tetap dijaga ya :)";
+            } else if (parseFloat(bmi) >= 25 && parseFloat(bmi) <= 29.9) {
+                ket = "Kurang sehat karena asupan gizi berlebih & perlu menambah olahraga";
+            } else {
+                ket = "Kurang sehat karena asupan gizi terlalu berlebihan. Sehingga perlu olahraga ekstra";
+            }
+
+            // Display the category message inside the <span> tag with id "category"
+            const categorySpan = document.getElementById('category');
+            categorySpan.textContent = ket;
+
+            // Set the color of the category text
+            if (parseFloat(bmi) < 18.5) {
+                categorySpan.style.color = "#ffc44d"; // Yellow color for kategori kekurangan badan
+            } else if (parseFloat(bmi) >= 18.5 && parseFloat(bmi) <= 24.9) {
+                categorySpan.style.color = "#0be881"; // Green color for kategori Normal
+            } else if (parseFloat(bmi) >= 25 && parseFloat(bmi) <= 29.9) {
+                categorySpan.style.color = "#ff884d"; // Orange color for kategori kelebihan badan
+            } else {
+                categorySpan.style.color = "#ff5e57"; // Red color for kategori kegemukan
+            }
+        };
+    </script>     
 </body>
 </html>
